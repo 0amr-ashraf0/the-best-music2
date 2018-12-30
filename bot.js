@@ -3,7 +3,7 @@ const client = new Discord.Client();
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-   client.user.setActivity("1help",{type: 'WATCHING'})
+   client.user.setActivity("2help",{type: 'WATCHING'})
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -37,7 +37,7 @@ const queue = new Map();
  
  
  
-var prefix = "البرفكس" 
+var prefix = "2" 
 client.on('message', async msg => {
     if (msg.author.bot) return undefined;
    
@@ -106,7 +106,7 @@ ${videos.map(video2 => `[**${++index} **] \`${video2.title}\``).join('\n')}`)
                     var video = await youtube.getVideoByID(videos[videoIndex - 1].id);
                 } catch (err) {
                     console.error(err);
-                    return msg.channel.send(':X: لا يتوفر نتآئج بحث ');
+                    return msg.channel.send(':x: لا يتوفر نتآئج بحث ');
                 }
             }
  
